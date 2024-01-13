@@ -1,0 +1,30 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/proyecto.css"
+---
+
+<MainLayout title="Proyectos" seoTitle="Nuestros Proyectos">
+
+<section class="flow my-0 mx-auto w-11/12 md:w-8/12">
+  <h1 class="text-5xl w-full text-center font-bold uppercase">NUESTROS PROYECTOS</h1>
+  <p class="text-center">Explora nuestro catálogo de proyectos y descubre cómo hemos transformado ideas en soluciones innovadoras para nuestros clientes.</p>
+  <div class="team">
+    <ul class="auto-grid" role="list">
+      <li>
+        <a href="/proyectos/tomapp" class="profile">
+          <h2 class="profile__name">TOMAPP</h2>
+          <p>Aplicación web</p>
+          <img alt="Aplicación Web Tomapp" src="/images/tomapp_slide.png" />
+        </a>
+      </li>
+      <li>
+        <a href="proyectos/admision_2023" class="profile">
+          <h2 class="profile__name">Proceso de Admisión 2023 </h2>
+          <p>Página web</p>
+          <img alt="Proceso de Admisión 2023" src="/images/ut_slide.png" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+</MainLayout>

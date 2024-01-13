@@ -1,0 +1,53 @@
+---
+import type { GetStaticPaths } from "astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import "../../styles/proyectos.css"
+
+
+export const getStaticPaths = (() => {
+        return [
+        {
+            params:{proyectos:"tomapp"},
+            props: {
+                nombre: "TOMAPP",
+                urlImg:"bg-tomapp",
+                descripcion:[
+                    "Explora la esencia de TOMAPP, más que un proyecto, es la manifestación de una visión única. Este caso de estudio expone nuestro enfoque metódico, combinando una ejecución precisa con la chispa creativa que impulsa cada etapa. Creado exclusivamente para un cliente específico, TOMAPP atestigua nuestra habilidad para convertir ideas en una experiencia web excepcional.",
+                    "La aplicación web diseñada para el cliente, especializado en la venta de jitomates, se concibe como una herramienta integral que aborda aspectos críticos de su operación. Entre las diversas funcionalidades esenciales, destaca el Registro de Viajes y Costos, permitiendo un seguimiento detallado de cada viaje de adquisición de jitomates. La aplicación no solo registra los costos asociados, como gastos de transporte, sino que también captura la cantidad de jitomates adquiridos en cada transacción. Esta función facilita una gestión precisa de los recursos utilizados en la adquisición de productos.",
+                    "Otra característica clave es el Cálculo de Costo Mínimo del Producto, asegurando que el cliente evite pérdidas al determinar el costo mínimo basado en los costos de los viajes y la cantidad de productos adquiridos. La Gestión de Ventas proporciona un control efectivo al registrar cada venta y descontar automáticamente la cantidad de productos vendidos del inventario, manteniendo así un inventario actualizado en tiempo real. Además, la aplicación aborda la Gestión de Deudores, simplificando el seguimiento de pagos y actualizando registros cuando los deudores saldan sus deudas. Con el Registro de Envíos de Dinero, se centraliza la información de los envíos realizados a propietarios de huertas, proporcionando una visión completa de las transacciones financieras.",
+                    "Los beneficios de esta aplicación son notables, destacando la Mayor Eficiencia al automatizar tareas, el Control Preciso en aspectos financieros e inventarios, la Facilitación del Seguimiento de Deudas para una recuperación efectiva y un Historial Completo de Envíos de Dinero para una contabilidad detallada. Además, la generación de reportes en PDF agrega un toque de profesionalismo al proporcionar una documentación organizada y fácilmente accesible.",
+                    "¿Preparado para materializar tu visión de forma exclusiva con nosotros?",
+                ]
+            }
+        }, 
+        {
+            params:{proyectos:"admision_2023"},
+            props: {
+                nombre: "Proceso de Admisión 2023",
+                urlImg:"bg-convocatoria",
+                descripcion:[
+                    "La Página de Difusión - Proceso de Admisión 2023 redefine la experiencia universitaria al proporcionar una plataforma completa y amigable para los aspirantes. Su diseño intuitivo se concentra en tres secciones principales: Convocatoria 2023, Ofertas Académicas y Pagos. Incluye un cálido mensaje de bienvenida, dividido en secciones detalladas, proporcionando fechas importantes, requisitos, pasos de inscripción y la opción de descargar la convocatoria en PDF.",
+                    "La sección de Ofertas Académicas organiza las carreras en categorías como Economía y Administración, Eléctrica e Industria, y Tecnologías de la Información, facilitando la exploración. Una lista detallada de carreras, acompañada de imágenes sugerentes, redirige a menús específicos con información sobre perfiles, ocupación profesional y listados de materias. Este enfoque estructurado mejora la toma de decisiones de los futuros estudiantes.",
+                    "La página también destaca por su sección de Pagos, presentando un video instructivo para guiar a los visitantes a través del proceso de inscripción. El pie de página proporciona información de contacto y enlaces directos a canales oficiales de redes sociales, fortaleciendo la conexión entre la universidad y los aspirantes universitarios.",
+                    "La Página de Difusión para el Proceso de Admisión 2023 ofrece beneficios sustanciales tanto para la universidad como para los aspirantes a estudiantes. Con un diseño accesible y claro, facilita la búsqueda de información crítica sobre el proceso de admisión. La estructura intuitiva, la información detallada sobre carreras y la orientación para el proceso de inscripción mejoran la experiencia del usuario y contribuyen a decisiones académicas más informadas. Además, la inclusión de elementos multimedia, como videos y mensajes de bienvenida, aporta un toque de profesionalismo y modernización, mientras que los accesos directos a redes sociales fomentan la interacción y la comunicación efectiva entre la universidad y los aspirantes universitarios, consolidando así una experiencia integral para todos los futuros aprendientes.",
+                ]
+            }
+        }
+    ]
+}) satisfies GetStaticPaths;
+
+const {nombre, descripcion, urlImg} = Astro.props;
+---
+
+<MainLayout title={`${nombre} - Proyecto de Nexuvi`} seoTitle={`${nombre} - Proyecto de Nexuvi`}>
+	<section class="content">
+		<div class={`parallax urlImg ${urlImg}`}>
+			<div class="texto-interior">
+                <h1 class="font-bold mt-4">{nombre}</h1>
+			</div>
+		</div>
+		<div class="texto mx-auto w-5/6 md:w-4/6 lg:w-3/6 mt-7 mb-9">
+			{descripcion.map((texto) => <p>{texto}</p>)}
+        </div>
+	</section>
+</MainLayout>

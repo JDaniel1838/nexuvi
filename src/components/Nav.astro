@@ -1,0 +1,50 @@
+---
+import "../styles/menu.css";
+---
+
+<header class="lg:flex p-5 gap-5 h-fit ">
+  <div class="flex w-full justify-between">
+    <div class="flex w-full justify-between">
+      <a class="h-auto flex justify-center items-center" href="/">
+        <img class="w-9 h-9" src="/logo.svg" alt="" srcset="">
+      </a>
+      <div class="block lg:hidden">
+       <button class="menu-toggle"></button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="hidden lg:flex">
+      <ul class="flex flex-col lg:flex-row lg:gap-5">
+        <li class="flex items-center justify-center">
+          <a class="px-2 text-lg text-nowrap hover:transform hover:scale-110" href="/">
+            <span class="hover:text-nexuvi inline-block transform transition duration-500 hover:scale-110">Inicio</span>
+          </a>
+        </li>
+        <li class="flex items-center justify-center">
+          <a class="px-2 text-lg text-nowrap hover:transform hover:scale-110" href="/proyectos">
+            <span class="hover:text-nexuvi inline-block transform transition duration-500 hover:scale-110">Proyectos</span>
+          </a>
+        </li>
+        <li class="flex items-center justify-center">
+          <a class="px-2 text-lg text-nowrap hover:transform hover:scale-110" href="/acerca">
+            <span class="hover:text-nexuvi inline-block transform transition duration-500 hover:scale-110">Acerca de</span>
+          </a>
+        </li>
+        <li class="flex items-center justify-center">
+          <a class="px-2 text-lg text-nowrap hover:transform hover:scale-110" href="/contacto">
+            <span class="hover:text-nexuvi inline-block transform transition duration-500 hover:scale-110">Contacto</span>
+        </a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+  <nav>
+      <ul class="menu">
+          <li class="menu-item" data-ref="/" data-text="Inicio">Inicio</li>
+          <li class="menu-item" data-ref="/proyectos" data-text="Proyectos">Proyectos</li>
+          <li class="menu-item" data-ref="/acerca" data-text="Acerca de">Acerca de</li>
+          <li class="menu-item" data-ref="/contacto" data-text="Contacto">Contacto</li>
+      </ul>
+    </nav>
+<script src="../helpers/menu.js"></script>

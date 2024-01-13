@@ -1,0 +1,41 @@
+---
+import {SEO} from "astro-seo";
+const { title, seoTitle, seoDesc, image = "/preview.png" } = Astro.props;
+import { SITE_URL, SITE_TITLE, SITE_LANG, SITE_DESCRIPTION } from "../consts";
+const { pathname } = Astro.url;
+const cover = image;
+---
+
+<head>
+    <SEO title={seoTitle} description={SITE_DESCRIPTION} />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="mask-icon" href="/favicon.ico" color="#0f172a" />
+    <meta name="msapplication-TileColor" content="#0f172a" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content={SITE_TITLE} />
+    <meta property="og:url" content={`${SITE_URL}${pathname}`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={seoDesc} />
+    <meta property="og:image" content={cover} />
+    <meta property="og:locale" content={SITE_LANG} />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={`${SITE_URL}${pathname}`} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={seoDesc} />
+    <meta
+    property="twitter:image"
+    content={new URL(cover, `${SITE_URL}${pathname}`)}
+    />
+
+</head>

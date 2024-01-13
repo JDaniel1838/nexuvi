@@ -1,0 +1,254 @@
+/* .wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+} */
+
+/* Style the Un-order list by setting its list-style to none */
+.wrapper ul {
+  list-style: none;
+}
+
+/* Style the list items inside the UL list, by setting its width, height and line-height 
+  and float them to left and set its border and border-radius.
+ */
+.wrapper ul li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper ul li a {
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  margin: 0 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 5px solid #d8e2dc;
+  float: left;
+  transition: all 0.5s ease;
+}
+
+/* Style the icons by setting its color and margin-top value to 20px 
+to align it properly */
+.wrapper ul li a .fa {
+  color: #d8e2dc;
+  transition: all 0.5s ease;
+}
+
+/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
+  to icons for glowing effect and use transition property for smooth transition effect. */
+/*facebook*/
+.wrapper ul li a:hover.facebook {
+  border: 5px solid #0061da;
+  box-shadow: 0 0 15px #0061da;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li a:hover .fa-facebook {
+  color: #0061da;
+  text-shadow: 0 0 15px #0061da;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li a:hover path.facebook {
+  fill: #0061da;
+  filter: drop-shadow(0 35px 35px rgba(0, 97, 218, 0.6));
+  transition: all 0.5s ease;
+}
+
+/*twitter*/
+.wrapper ul li a:hover.twitter {
+  border: 5px solid #fff;
+  box-shadow: 0 0 15px #fff;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li a:hover .fa-twitter {
+  color: #00aced;
+  text-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li a:hover path.twitter {
+  fill: #fff;
+  filter: drop-shadow(0 35px 35px rgba(255, 255, 255, 0.6));
+  transition: all 0.5s ease;
+}
+
+/* instagram */
+.wrapper ul li a:hover.instagram {
+  border: 5px solid #4f5bd5;
+  box-shadow: 0 0 15px #4f5bd5;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li a:hover .fa-instagram {
+  color: #4f5bd5;
+  text-shadow: 0 0 15px #4f5bd5;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li a:hover path.instagram {
+  fill: #4f5bd5;
+  filter: drop-shadow(0 35px 35px rgba(79, 91, 213, 0.6));
+  transition: all 0.5s ease;
+}
+
+/* google */
+.wrapper ul li a:hover.mail {
+  border: 5px solid #ea4335;
+  box-shadow: 0 0 15px #ea4335;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li a:hover .fa-mail {
+  color: #ea4335;
+  text-shadow: 0 0 15px #ea4335;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li a:hover path.mail {
+  fill: #dd4b39;
+  filter: drop-shadow(0 35px 35px rgba(221, 76, 57, 0.6));
+  transition: all 0.5s ease;
+}
+
+/* whatsapp */
+.wrapper ul li a:hover.whatsapp {
+  border: 5px solid #4dc247;
+  box-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li a:hover .fa-whatsapp {
+  color: #4dc247;
+  text-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li a:hover path.whatsapp {
+  fill: #4dc247;
+  filter: drop-shadow(0 35px 35px rgba(77, 194, 71, 0.6));
+  transition: all 0.5s ease;
+}
+
+/*facebook*/
+.wrapper ul li a:hover.tiktok {
+  border: 5px solid #bc2a8d;
+  box-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li a:hover .fa-tiktok {
+  color: #bc2a8d;
+  text-shadow: 0 0 15px #bc2a8d;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li a:hover path.tiktok {
+  fill: #bc2a8d;
+  filter: drop-shadow(0 35px 35px rgba(188, 42, 141, 0.6));
+  transition: all 0.5s ease;
+}
+
+/* Button call us */
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  min-height: 60px;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #fff;
+  background: #3ea0eb;
+  background: rgb(62, 160, 235);
+  background: linear-gradient(
+    90deg,
+    rgb(89, 170, 232) 0%,
+    rgba(62, 160, 235, 1) 100%
+  );
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 0 25px 25px rgba(89, 170, 232, 0.6);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+a.button-call::before {
+  content: "";
+  border-radius: 1000px;
+  min-width: calc(300px + 16px);
+  min-height: calc(60px + 16px);
+  border: 6px solid #3ea0eb;
+  box-shadow: 0 0 60px rgba(89, 170, 232, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.button-call:hover,
+.button-call:focus {
+  color: #fff;
+  transform: translateY(-6px);
+}
+
+a.button-call:hover::before,
+a.button-call:focus::before {
+  opacity: 1;
+}
+
+a.button-call::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #3ea0eb;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+a.button-call:hover::after,
+a.button-call:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
