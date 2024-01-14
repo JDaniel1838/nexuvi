@@ -1,16 +1,16 @@
 ---
-import {SEO} from "astro-seo";
-const { title, seoTitle, seoDesc, image = "/preview.png" } = Astro.props;
+const { title, seoTitle, seoDesc } = Astro.props;
 import { SITE_URL, SITE_TITLE, SITE_LANG, SITE_DESCRIPTION } from "../consts";
 const { pathname } = Astro.url;
-const cover = image;
+const cover = "/preview.png";
 ---
 
 <head>
-    <SEO title={seoTitle} description={SITE_DESCRIPTION} />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
+    <title>{seoTitle}</title>
+    <meta name="description" content={SITE_DESCRIPTION}>
+    <link rel="canonical" href={new URL(`${SITE_URL}${pathname}`)}>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
