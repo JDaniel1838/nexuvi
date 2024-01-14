@@ -26,12 +26,12 @@ const cover = "/preview.png";
     <meta property="og:url" content={`${SITE_URL}${pathname}`} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={seoDesc} />
-    <meta property="og:image" content={cover} />
+    <meta property="og:image" content={new URL(cover, `${SITE_URL}${pathname}`)} />
     <meta property="og:locale" content={SITE_LANG} />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={`${SITE_URL}${pathname}`} />
-    <meta property="twitter:title" content={title} />
+    <meta property="twitter:title" content={seoTitle} />
     <meta property="twitter:description" content={seoDesc} />
     <meta
     property="twitter:image"
