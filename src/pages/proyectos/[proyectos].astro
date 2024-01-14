@@ -21,7 +21,7 @@ export const getStaticPaths = (() => {
             }
         }, 
         {
-            params:{proyectos:"admision_2023"},
+            params:{proyectos:"proceso_admision"},
             props: {
                 nombre: "Proceso de Admisión 2023",
                 urlImg:"bg-convocatoria",
@@ -38,6 +38,7 @@ export const getStaticPaths = (() => {
 
 const {nombre, descripcion, urlImg} = Astro.props;
 ---
+
 
 <MainLayout title={`${nombre} - Proyecto de Nexuvi`} seoTitle={`${nombre} - Proyecto de Nexuvi`}>
 	<section class="content">
